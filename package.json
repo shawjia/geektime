@@ -1,0 +1,26 @@
+{
+  "name": "geektime",
+  "version": "1.0.0",
+  "description": "API client for time.geekbang.org",
+  "main": "index.js",
+  "repository": "https://github.com/shawjia/geektime",
+  "author": "shawjia",
+  "license": "MIT",
+  "scripts": {
+    "test": "ava"
+  },
+  "keywords": [
+    "geektime",
+    "API",
+    "极客时间"
+  ],
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "eslint": "^5.5.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0"
+  },
+  "dependencies": {
+    "got": "^9.2.0"
+  }
+}
