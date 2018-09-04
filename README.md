@@ -1,6 +1,6 @@
 # geektime
 
-> API client for time.geekbang.org
+> API client for time.geekbang.org (极客时间)
 
 ## INSTALL
 ```bash
@@ -30,7 +30,7 @@ const client = new Geektime('phone', 'pass');
 
 ### products()
 
-产品列表，返回 专栏/视频课/微课/其他
+返回产品列表 (专栏/视频课/微课/其他)
 
 ### intro(cid)
 
@@ -49,9 +49,12 @@ const client = new Geektime('phone', 'pass');
 返回音频列表
 
 ### NOTE
-- *cid:* 专栏 id 
-- *id:* 文章 id
+
+| param | note |
+| --- | --- |
+| cid | 专栏 id |
+| id | 文章 id |
 
 ## License
 
-MIT © [shawjia](https://github.com/shawjia)
+MIT

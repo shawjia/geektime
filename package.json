@@ -4,7 +4,7 @@
   "description": "API client for time.geekbang.org",
   "main": "index.js",
   "repository": "https://github.com/shawjia/geektime",
-  "author": "shawjia",
+  "author": "shawjia <shawjia@gmail.com> (github.com/shawjia)",
   "license": "MIT",
   "scripts": {
     "test": "ava"
