@@ -32,7 +32,7 @@ test('api.articles(48)', async (t) => {
 test('api.article(14271)', async (t) => {
   const res = await client.article(articleId);
 
-  t.true(res.article_title.startsWith('高效学习'));
+  t.true(res.article_title.startsWith('95 | 高效学习'));
 });
 
 test('api.audios(48)', async (t) => {
