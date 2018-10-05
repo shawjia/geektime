@@ -10,6 +10,7 @@ const links = {
   article: `${host}/article`,
   audios: `${host}/column/audios`,
 };
+const CN_CODE = '86';
 
 async function request(link, body = {}, cookie = '') {
   const headers = {
@@ -38,18 +39,27 @@ async function request(link, body = {}, cookie = '') {
   }
 }
 
-class Api {
-  constructor(cellphone, password) {
-    if (typeof cellphone !== 'string' || typeof password !== 'string') {
+class Geektime {
+  constructor(country, cellphone, password) {
+    let countryCode = country;
+    let phone = cellphone;
+    let pass = password;
+
+    if (password === undefined) {
+      [countryCode, phone, pass] = [CN_CODE, country, cellphone];
+    }
+
+    if (typeof phone !== 'string' || typeof pass !== 'string') {
       throw new TypeError('cellphone/password should be string');
     }
 
-    if (cellphone === '' || password === '') {
+    if (phone === '' || pass === '') {
       throw new Error('cellphone/password should not be empty');
     }
 
-    this.cellphone = cellphone;
-    this.password = password;
+    this.country = +countryCode;
+    this.cellphone = phone;
+    this.password = pass;
     this.cookie = null;
   }
 
@@ -106,11 +116,11 @@ class Api {
       return this.cookie;
     }
 
-    const { cellphone, password } = this;
+    const { cellphone, password, country } = this;
     const body = {
       cellphone,
       password,
-      country: 86,
+      country,
       remember: 1,
       captcha: '',
       platform: 4,
@@ -124,4 +134,4 @@ class Api {
   }
 }
 
-module.exports = Api;
+module.exports = Geektime;

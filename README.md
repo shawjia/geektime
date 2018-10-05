@@ -28,6 +28,12 @@ const client = new Geektime('phone', 'pass');
 
 ## API
 
+### init
+
+`new Geektime([country], phone, password)`
+
+country 为可选，如果不传，当 86 处理
+
 ### products()
 
 返回产品列表 (专栏/视频课/微课/其他)
@@ -36,7 +42,7 @@ const client = new Geektime('phone', 'pass');
 
 返回专栏信息
 
-###  articles(cid, size = 1000)
+### articles(cid, size = 1000)
 
 返回专栏文章列表
 
