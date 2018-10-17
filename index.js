@@ -8,6 +8,7 @@ const links = {
   intro: `${host}/column/intro`,
   articles: `${host}/column/articles`,
   article: `${host}/article`,
+  comments: `${host}/comments`,
   audios: `${host}/column/audios`,
 };
 const CN_CODE = '86';
@@ -102,6 +103,13 @@ class Geektime {
     const cookie = await this.getCookie();
 
     return request(links.article, { id }, cookie);
+  }
+
+  // 文章评论
+  async comments(aid, size = 200, prev = 0) {
+    const cookie = await this.getCookie();
+
+    return request(links.comments, { aid, size, prev }, cookie);
   }
 
   // 音频列表

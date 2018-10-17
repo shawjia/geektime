@@ -55,6 +55,12 @@ test('client.article(14271)', async (t) => {
   t.true(res.article_title.startsWith('95 | 高效学习'));
 });
 
+test('client.comments(14271)', async (t) => {
+  const res = await client.comments(articleId, 1);
+
+  t.true(res.list.length > 0);
+});
+
 test('client.audios(48)', async (t) => {
   const res = await client.audios(cid);
 

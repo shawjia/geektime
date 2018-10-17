@@ -50,6 +50,10 @@ country 为可选，如果不传，当 86 处理
 
 返回单篇文章详情
 
+### articles(aid, size = 200, prev = 0)
+
+返回专栏文章评论
+
 ### audios(cid, size = 1000)
 
 返回音频列表
